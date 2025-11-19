@@ -1,0 +1,670 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#header-index {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    grid-area: my-header-index;
+    font-family: sans-serif;
+    z-index: 2;
+}
+
+.contenedor-enlaces-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    z-index: 1;
+    background: linear-gradient(#34495e 60%, rgba(83, 122, 180, 0.939));
+}
+
+.contenedor-enlaces-header.estatco {
+    width: 100%;
+    top: 0;
+    height: auto;
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    background: linear-gradient(#4a82dd 60%, (83, 122, 180, 0.939));
+
+}
+
+.contenedor-logo {
+    width: 10vw;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo-empresa-header {
+    width: 10rem;
+    height: auto;
+    z-index: 2;
+}
+
+.contenedor-opciones {
+    width: 70vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+#inicio-header {
+    text-align: center;
+    width: auto;
+    padding: 0.4rem;
+    background-color: black;
+    border: 4px solid black;
+    border-radius: 1rem 1rem 0 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.contenedor-opciones>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    text-transform: capitalize;
+    list-style: none;
+    color: white;
+    font-size: 2rem;
+    border-bottom: 2px solid white;
+}
+
+.contenedor-opciones>ul>li>a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contenedor-enlaces-rrss {
+    width: 10vw;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+}
+
+.contenedor-enlaces-rrss>ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.contenedor-enlaces-rrss>ul>li {
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icon-header {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.contendor-imagen-header {
+    height: auto;
+}
+
+.foto-header-main {
+    width: 100vw;
+    height: auto;
+    margin-top: -5rem;
+
+}
+
+.contenedor-slogan {
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 16%;
+    z-index: 0;
+}
+
+.slogan {
+    font-size: 3rem;
+    text-decoration: underline;
+    z-index: -1;
+}
+
+.solicitar-presupuesto-header {
+    background-color: #34495e;
+    height: 4rem;
+    width: 26rem;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+
+}
+
+#body-index {
+    display: grid;
+    width: 100vw;
+    margin: 0%;
+    overflow-x: hidden;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+
+        "my-header-index  my-header-index  my-header-index my-header-index"
+        "my-nav-index     my-nav-index     my-nav-index    my-nav-index"
+        "my-main-index    my-main-index    my-main-index   my-main-index"
+        "my-footer-index  my-footer-index  my-footer-index my-footer-index";
+
+}
+
+#nav-index {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: fixed;
+    top: 6.5rem;
+    background-color: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+    justify-items: center;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+#nav-index.visible {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#nav-index.estati {
+    margin-top: 6.8rem;
+    position: fixed;
+    width: 100%;
+    height: auto;
+}
+
+.contenedor-enlaces-nav {
+    --items: 4;
+    /* número de enlaces */
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.contenedor-enlaces-nav>a {
+    flex: 1;
+    /* todos ocupan el mismo ancho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.contenedor-enlaces-nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: calc(100% / var(--items));
+    transition: all .3s ease;
+    border-radius: 8px;
+    z-index: 0;
+    background: #1abc9c;
+}
+
+/* Hover dinámico según la posición */
+.contenedor-enlaces-nav a:nth-child(1):hover~.animation {
+    left: calc(0 * (100% / var(--items)));
+    background: #1abc9c;
+}
+
+.contenedor-enlaces-nav a:nth-child(2):hover~.animation {
+    left: calc(1 * (100% / var(--items)));
+    background: #e74c3c;
+}
+
+.contenedor-enlaces-nav a:nth-child(3):hover~.animation {
+    left: calc(2 * (100% / var(--items)));
+    background: #3498db;
+}
+
+.contenedor-enlaces-nav a:nth-child(4):hover~.animation {
+    left: calc(3 * (100% / var(--items)));
+    background: #9b59b6;
+}
+
+
+
+/* ahora vamos a hacer que se active cuando hagamos scroll de forma automatica */
+
+.contenedor-enlaces-nav a.active {
+    color: white;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* También actualizamos la animación al "active" */
+.contenedor-enlaces-nav a:nth-child(1).active~.animation {
+    left: calc(0 * (100% / var(--items)));
+    background: #1abc9c;
+}
+
+.contenedor-enlaces-nav a:nth-child(2).active~.animation {
+    left: calc(1 * (100% / var(--items)));
+    background: #e74c3c;
+}
+
+.contenedor-enlaces-nav a:nth-child(3).active~.animation {
+    left: calc(2 * (100% / var(--items)));
+    background: #3498db;
+}
+
+.contenedor-enlaces-nav a:nth-child(4).active~.animation {
+    left: calc(3 * (100% / var(--items)));
+    background: #9b59b6;
+}
+
+#main-index {
+    grid-area: my-main-index;
+    display: grid;
+    border: 4px solidlightsalmon;
+    gap: 10rem;
+    margin-top: 9rem;
+
+
+    #landing-page-main{
+        height: auto;
+        width: 200vw;
+        display: flex;
+        overflow-y: hidden;
+    }
+
+    
+        .deslizador-landingPage {
+            height: auto;
+            width: 100vw;
+        }
+
+            .deslizador-landingPage.deslizar-izquierda {
+                width: 0px;
+                height: 0px;
+                transition: 1s;
+
+            }
+
+            #landing-page-main.deslizar-contenido-izquierda {
+                margin-top: 1rem;
+                height: auto;
+                width: 100%;
+                display: flex;
+                transition: 1s;
+            }
+
+
+        [id$="-main"]{
+            scroll-margin-top:12rem;
+            }
+
+
+
+        .seccion-informacion {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.8rem;
+            border-radius: 2rem;
+            overflow: hidden;
+            height: auto;
+            background: #fff;
+            border-radius: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            #seccion-landingPage > div > h2{
+                font-family: "Poppins", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: underline;
+            }
+
+             #seccion-landingPage >div>p{
+                font-family: "Roboto", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 100;
+                font-style: italic;
+                font-variation-settings: "wdth" 100;
+                padding: 2rem;
+                text-align: center;
+                background: #fff;
+                border-radius: 1.2rem;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            #mediaMain{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                #img-landing-page{
+                    width: auto;
+                    height: auto;
+                }
+
+
+    .tarjetas-importantes{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #fff;
+    }
+
+        .tarjeta-info{
+            width: 17rem;
+            height: auto;
+            border: 3px solid black;
+            border-radius: 1.4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .contenedor-icono-tarjeta{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .icono-tarjeta{
+                    width: 12rem;
+                    height: auto;
+                }
+
+            .titulo-tarjeta{
+                font-family: "Poppins",sans-serif;
+                text-decoration: underline;
+            }
+            
+            .info-rapida-tarjeta{
+                font-family: "Roboto", sans-serif;
+            }
+
+    
+    #ecommerce-main{
+        opacity: 0;
+    }
+
+        #ecommerce-main.visible{
+            width: 100vw;
+            height: auto;
+            opacity: 1;
+            transition: ease-in 1s;
+            display: flex;
+            background: #fff;
+            border-radius: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            #seccion-Ecommerce{
+                display: flex;
+                flex-direction: row;
+            }
+
+                #infoEcommerce{
+                    text-align: center;
+                    padding: 2rem;
+                }
+                    #infoEcommerce > h2{
+                        font-family: "Poppins", sans-serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        text-align: center;
+                        text-transform: uppercase;
+                        text-decoration: underline;
+                    }
+                    #infoEcommerce>p{
+                        font-family: "Roboto", sans-serif;
+                        font-optical-sizing: auto;
+                        font-weight: 100;
+                        font-style: italic;
+                        font-variation-settings: "wdth" 100;
+                        padding: 2rem;
+                        text-align: center;
+                    }
+
+
+
+        #info-webCorporativa{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            #titulo-web-corporativa{
+                font-family: "Poppins", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: underline;
+            }
+
+
+
+            #descripcion-web-corporativa{
+                font-family: "Roboto", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 100;
+                font-style: italic;
+                font-variation-settings: "wdth" 100;
+                padding: 2rem;
+                text-align: center;
+            }
+
+
+    
+    #blog-main{
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 4rem;
+    }
+
+        #seccion-blog{
+            width: 35rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow0.3s ease;
+        }
+
+            #seccion-blog > div{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+
+                #seccion-blog>div>h2{
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 400;
+                    font-size: 2rem;
+                    font-style: normal;
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                }
+
+                #seccion-blog>div>p{
+                    font-size: 1.5rem;
+                    font-family: "Roboto", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 100;
+                    font-style: italic;
+                    font-variation-settings: "wdth" 100;
+                    padding: 2rem;
+                    text-align: center;
+                }
+
+
+        #seccion-plataforma-personalizada{
+            width: 35rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow0.3s ease;
+        }
+
+            #seccion-plataforma-personalizada>div {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+    
+            #seccion-plataforma-personalizada>div>h2 {
+                font-family: "Poppins", sans-serif;
+                font-weight: 400;
+                font-size: 2rem;
+                font-style: normal;
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: underline;
+            }
+    
+            #seccion-plataforma-personalizada>div>p {
+                font-size: 1.5rem;
+                font-family: "Roboto", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 100;
+                font-style: italic;
+                font-variation-settings: "wdth" 100;
+                padding: 2rem;
+                text-align: center;
+            }
+
+            #img-plataforma-personalizada{
+
+                width: 25rem;
+            }
+
+}
+
+
+#footer-index {
+    grid-area: my-footer-index;
+    display: grid;
+    background: #0d1b2a;
+    color: #e0e1dd;
+    border-top: none;
+    padding: 3rem 5rem;
+    gap: 2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer {
+    display: flex;
+}
+
+.footer a {
+    color: #e0e1dd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.footer a:hover {
+    color: #4a82dd;
+}
+
+.seccion-empresa {
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+
+}
+
+.logo-nombre>picture>img {
+    width: 20rem;
+    height: 15rem;
+}
+
+.slogan-footer {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.informacion-empresa {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.informacion-empresa>div label {
+    text-decoration: underline;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+}
+
+.derechos-empresa {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+

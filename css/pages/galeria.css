@@ -1,0 +1,295 @@
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f9fafb;
+    overflow-x: hidden;
+}
+
+#header-index {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    grid-area: my-header-index;
+    font-family: sans-serif;
+    z-index: 2;
+}
+
+.contenedor-enlaces-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    z-index: 1;
+    background: linear-gradient(#34495e 60%, rgba(83, 122, 180, 0.939));
+}
+
+.contenedor-enlaces-header.estatco {
+    width: 100%;
+    top: 0;
+    height: auto;
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    background: linear-gradient(#4a82dd 60%, (83, 122, 180, 0.939));
+
+}
+
+.contenedor-logo {
+    width: 10vw;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo-empresa-header {
+    width: 10rem;
+    height: auto;
+    z-index: 2;
+}
+
+.contenedor-opciones {
+    width: 70vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+#inicio-header {
+    text-align: center;
+    width: auto;
+    padding: 0.4rem;
+    background-color: black;
+    border: 4px solid black;
+    border-radius: 1rem 1rem 0 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.contenedor-opciones>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    text-transform: capitalize;
+    list-style: none;
+    color: white;
+    font-size: 2rem;
+    border-bottom: 2px solid white;
+}
+
+.contenedor-opciones>ul>li>a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contenedor-enlaces-rrss {
+    width: 10vw;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.contenedor-enlaces-rrss>ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.contenedor-enlaces-rrss>ul>li {
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icon-header {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.contendor-imagen-header {
+    height: auto;
+
+}
+
+.foto-header-main {
+    width: 100vw;
+    height: auto;
+    margin-top: -5rem;
+
+}
+
+.contenedor-slogan {
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    z-index: 0;
+}
+
+.slogan {
+    font-size: 3rem;
+    text-decoration: underline;
+    z-index: -1;
+}
+
+.solicitar-presupuesto-header {
+    background-color: #34495e;
+    height: 4rem;
+    width: 26rem;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+
+}
+
+#main-galeria{
+    overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cuadro-contenedor-seccion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+#carousel-seccion1{
+    margin: 8rem 0;
+    display: flex;
+    transition: transform 0.6s ease;
+    width: 100%;
+}
+
+.contenido-carousel{
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+}
+
+.contenido-carousel picture img {
+    width: 55rem;
+    height: 50rem;
+}
+
+
+#carousel-seccion1::before,
+#carousel-seccion1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#footer-index {
+    grid-area: my-footer-index;
+    display: grid;
+    background: #0d1b2a;
+    color: #e0e1dd;
+    border-top: none;
+    padding: 3rem 5rem;
+    gap: 2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer {
+    display: flex;
+}
+
+.footer a {
+    color: #e0e1dd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.footer a:hover {
+    color: #4a82dd;
+}
+
+.seccion-empresa {
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+
+}
+
+.logo-nombre>picture>img {
+    width: 20rem;
+    height: 15rem;
+}
+
+.slogan-footer {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.informacion-empresa {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.informacion-empresa>div label {
+    text-decoration: underline;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+}
+
+.derechos-empresa {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}

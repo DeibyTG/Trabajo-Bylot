@@ -1,0 +1,385 @@
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f9fafb;
+    color: #222;
+    overflow-x: hidden;
+}
+
+#header-index {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  grid-area: my-header-index;
+  font-family: sans-serif;
+  z-index: 2;
+}
+
+.contenedor-enlaces-header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  z-index: 1;
+  background: linear-gradient(#34495e 60%, rgba(83, 122, 180, 0.939));
+}
+
+.contenedor-enlaces-header.estatco {
+  width: 100%;
+  top: 0;
+  height: auto;
+  display: flex;
+  position: fixed;
+  z-index: 9999;
+  background: linear-gradient(#4a82dd 60%, (83, 122, 180, 0.939));
+
+}
+
+.contenedor-logo {
+  width: 10vw;
+  height: 100%;
+  z-index: 2;
+}
+
+.logo-empresa-header {
+  width: 10rem;
+  height: auto;
+  z-index: 2;
+}
+
+.contenedor-opciones {
+  width: 70vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+#inicio-header {
+  text-align: center;
+  width: auto;
+  padding: 0.4rem;
+  background-color: black;
+  border: 4px solid black;
+  border-radius: 1rem 1rem 0 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+
+.contenedor-opciones>ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  text-transform: capitalize;
+  list-style: none;
+  color: white;
+  font-size: 2rem;
+  border-bottom: 2px solid white;
+}
+
+.contenedor-opciones>ul>li>a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contenedor-enlaces-rrss {
+  width: 10vw;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+
+}
+
+.contenedor-enlaces-rrss>ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.contenedor-enlaces-rrss>ul>li {
+  align-items: center;
+  justify-content: center;
+
+}
+
+.icon-header {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.contendor-imagen-header {
+  height: auto;
+
+}
+
+.foto-header-main {
+  width: 100vw;
+  height: auto;
+  margin-top: -5rem;
+
+}
+
+.contenedor-slogan {
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 2%;
+  z-index: 0;
+}
+
+.slogan {
+  font-size: 3rem;
+  text-decoration: underline;
+  z-index: -1;
+}
+
+.solicitar-presupuesto-header {
+  background-color: #34495e;
+  height: 4rem;
+  width: 26rem;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 1rem;
+
+}
+
+#main-contacto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  gap: 3rem;
+}
+
+#titulo-mapa {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#titulo-mapa h1 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 2rem;
+    font-variation-settings: "wdth" 100;
+    padding: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: underline;
+}
+
+  #contenedor-mapa{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  #seccion1{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+
+    #input-informacion-mapa p{
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+    }
+
+  
+  #opcionesMap{
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  button{
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    background: #ffffff;
+    border: 3px solid #000000;
+    border-radius: 0;
+    padding: 1rem;
+    box-shadow: 8px 8px 0 #000000;
+    transition: all 0.2s ease;
+  }
+
+  button:hover {
+    background: #69a4cd;
+    transition: 0.2s;
+    border-radius: 1rem 0rem ;
+  }
+
+  #buscarDireccion {
+    width: 100%;
+    max-width: 22rem;
+    padding: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #000000;
+    background: #ffffff;
+    border: 3px solid #000000;
+    border-radius: 0;
+    box-shadow: 8px 8px 0 #000000;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+
+
+  .display-ruta-manual{
+    width: 0%;
+    opacity: 0;
+    transition: ease 1s;
+  }
+
+    .display-ruta-manual.activado{
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 1;
+      transition: ease 1s;
+    }
+
+    #buscarDireccion::placeholder {
+      color: #666666;
+      opacity: 0.8;
+    }
+
+  #buscarDireccion:focus {
+    background: #e8f3fb;
+    border-radius: 1rem 0rem;
+    box-shadow: 8px 8px 0 #3c5d75;
+  }
+
+  #map{
+    height: 30rem;
+    width: 70%;
+    margin: 4rem;
+    margin-top: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+    #footer-index {
+      grid-area: my-footer-index;
+      display: grid;
+      background: #0d1b2a;
+      color: #e0e1dd;
+      border-top: none;
+      padding: 3rem 5rem;
+      gap: 2rem;
+      font-family: "Poppins", sans-serif;
+    }
+  
+    .footer {
+      display: flex;
+    }
+  
+    .footer a {
+      color: #e0e1dd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+  
+    .footer a:hover {
+      color: #4a82dd;
+    }
+  
+    .seccion-empresa {
+      display: flex;
+      justify-content: left;
+      gap: 2rem;
+  
+    }
+  
+    .logo-nombre>picture>img {
+      width: 20rem;
+      height: 15rem;
+    }
+  
+    .slogan-footer {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: italic;
+      font-variation-settings: "wdth" 100;
+      font-size: 2rem;
+      text-decoration: underline;
+    }
+  
+    .informacion-empresa {
+      display: flex;
+      align-items: left;
+      justify-content: center;
+      gap: 10rem;
+    }
+  
+    .informacion-empresa>div label {
+      text-decoration: underline;
+    }
+  
+    .contacto {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .redes {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .navegacion {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .derechos-empresa {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
