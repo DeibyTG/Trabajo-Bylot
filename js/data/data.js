@@ -3,7 +3,7 @@
 
 export function f_datosJson(){
         let datosJson= new XMLHttpRequest;
-            datosJson.open("GET","../data/infoServicios.json",true);
+            datosJson.open("GET","../Trabajo-Bylot/data/infoServicios.json",true);
 
                 datosJson.onreadystatechange=function(){
                     if(datosJson.readyState===4 && datosJson.status===200){
